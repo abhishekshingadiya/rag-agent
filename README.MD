@@ -28,7 +28,7 @@ This project provides a secure Retrieval-Augmented Generation (RAG) agent servic
 
 3. Set up environment variables:
     ```sh
-    cp .env.example .env
+    cp env.example .env
     # Edit .env to add your OPENAI_API_KEY
     ```
 
