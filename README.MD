@@ -1,4 +1,4 @@
-# Secure Rag Agent Service
+# Rag Agent Service
 
 This project provides a secure Retrieval-Augmented Generation (RAG) agent service using FastAPI. The service allows you to store documents in a vector space and query them using LLM.
 
@@ -17,7 +17,7 @@ This project provides a secure Retrieval-Augmented Generation (RAG) agent servic
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/secure-rag-agent.git
+    git clone https://github.com/abhishekshingadiya/rag-agent.git
     cd secure-rag-agent
     ```
 
@@ -49,14 +49,14 @@ This project provides a secure Retrieval-Augmented Generation (RAG) agent servic
     curl -X POST "http://localhost:8001/secure-rag-agent/train" -H "Content-Type: application/json" -d '{"document_paths":["./data/handbook.pdf"]}'
     ```
 
-4. Query the vector space:
+4. Query the vector space(add session_id to reuse the vector space):
     ```sh
     curl -X POST "http://localhost:8001/secure-rag-agent/query" -H "Content-Type: application/json" -d '{"questions": ["What is the name of the company?", "Who is PM of India?", "Who is the CEO of the company?", "What is their vacation policy?", "What is the termination policy?"], "session_id": "your_session_id"}'
     ```
 
 5. Store documents and query the vector space:
     ```sh
-    curl -X POST 'http://localhost:8001/secure-rag-agent' -H 'accept: application/json' -H 'Content-Type: application/json' -d '{"document_paths":["./data/handbook.pdf"], "questions":["What is the name of the company?", "Who is PM of India?", "Who is the CEO of the company?", "What is their vacation policy?", "What is the termination policy?"]}
+    curl -X POST 'http://localhost:8001/secure-rag-agent' -H 'accept: application/json' -H 'Content-Type: application/json' -d '{"document_paths":["./data/handbook.pdf"], "questions":["What is the name of the company?", "Who is PM of India?", "Who is the CEO of the company?", "What is their vacation policy?", "What is the termination policy?"]}'
     ```
 
 ## Endpoints
